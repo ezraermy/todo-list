@@ -41,9 +41,13 @@ hr {
   background-color: #ddd;
 }
 
-ol {
-  margin-bottom: -9px;
-  padding-top: 0;
+.todo-list {
+  padding: 0;
+}
+
+.todo-list li {
+  list-style: none;
+  line-height: 0.5rem;
 }
 
 .input-btn {
