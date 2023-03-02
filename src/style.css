@@ -68,6 +68,10 @@ hr {
   cursor: pointer;
 }
 
+.check {
+  text-decoration: line-through;
+}
+
 .clr-btn {
   width: 100%;
   cursor: pointer;
