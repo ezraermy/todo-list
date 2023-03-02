@@ -59,7 +59,13 @@ hr {
 .title,
 .input {
   border: none;
-  margin-left: 25px;
+  margin-left: 44px;
+}
+
+.delete {
+  float: right;
+  margin-right: 12px;
+  cursor: pointer;
 }
 
 .clr-btn {

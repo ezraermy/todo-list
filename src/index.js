@@ -1,9 +1,17 @@
+// import _ from 'lodash';
 import './style.css';
 
-import renderList from './modules/UI.js';
+import { getLocalStorage, addTodo, showTodo } from './modules/todoUI.js';
 
-window.addEventListener('DOMContentLoaded', () => {
-  if (localStorage.getItem('todo')) {
-    renderList(JSON.parse(localStorage.todo));
-  }
+const form = document.querySelector('#inputForm');
+const inputForm = document.getElementById('inputField');
+
+window.addEventListener('load', () => {
+  showTodo();
+});
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  addTodo(inputForm.value, false, getLocalStorage().length + 1);
+  showTodo();
 });
