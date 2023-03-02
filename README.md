@@ -32,7 +32,7 @@
 
 # 📖 [ToDo List] <a name="about-project"></a>
 
-**[Todo List]** Aimed at creating todo list web application. A user can add a task, mark a task as completed and delete an already added task. 
+**[Todo List]** Aimed at creating todo list web application. A user can apply CRUD functionality i.e, add a task, read, update and delete an already added task. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -52,6 +52,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **[Home_page]**
+- **[CRUD_Functionality]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
