@@ -1,14 +1,12 @@
 import MyTodo from './todo.js';
 
-const allTodoList = document.getElementById('todoList');
-const inputTodo = document.getElementById('inputField');
-
 const getLocalStorage = () => {
   const storage = JSON.parse(localStorage.getItem('listStorage')) || [];
   return storage;
 };
 
 const showTodo = () => {
+  const allTodoList = document.getElementById('todoList');
   allTodoList.replaceChildren();
   getLocalStorage().forEach((item, id) => {
     let isCompleted;
@@ -16,7 +14,7 @@ const showTodo = () => {
       isCompleted = 'checked';
     }
     allTodoList.innerHTML += `
-      <div>
+      <div class="myList">
         <input id='check-${id}', "completed")' type='checkbox' ${item.Checked ? 'true' : 'false'} onChange='updateList(${id}, "completed")' ${isCompleted}>
         <input onkeyup='updateList(${id})' type="text" id='inputField-${id}' value='${item.description}' />
         <i class=" delete fa fa-trash" aria-hidden="true" onclick='removeList(${item.index})' id='delete-${item.index}'></i>
@@ -30,7 +28,6 @@ const addTodo = (description, completed, index) => {
   const task = getLocalStorage();
   task.push(addedTask);
   localStorage.setItem('listStorage', JSON.stringify(task));
-  inputTodo.value = '';
 
   showTodo();
 };
@@ -41,7 +38,7 @@ const reAssignIndex = (filteredArray) => {
   });
 };
 
-window.removeList = (id) => {
+const removeList = (id) => {
   const filteredArray = getLocalStorage().filter((item) => {
     if (item.index !== id) {
       return item;
@@ -72,4 +69,6 @@ window.updateList = (id) => {
   localStorage.setItem('listStorage', JSON.stringify(updateArray));
 };
 
-export { getLocalStorage, addTodo, showTodo };
+export {
+  getLocalStorage, addTodo, showTodo, removeList,
+};

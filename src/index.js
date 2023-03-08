@@ -1,12 +1,16 @@
 // import _ from 'lodash';
 import './style.css';
 
-import { getLocalStorage, addTodo, showTodo } from './modules/todoUI.js';
+import {
+  getLocalStorage, addTodo, showTodo, removeList,
+} from './modules/todoUI.js';
 import clearCompleted from './modules/clearComplated.js';
 
 const form = document.querySelector('#inputForm');
 const inputForm = document.getElementById('inputField');
 const clear = document.getElementById('clear');
+
+window.removeList = removeList;
 
 window.addEventListener('load', () => {
   showTodo();
