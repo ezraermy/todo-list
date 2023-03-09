@@ -2,7 +2,7 @@
 import './style.css';
 
 import {
-  getLocalStorage, addTodo, showTodo, removeList,
+  getLocalStorage, addTodo, showTodo, updateList, removeList,
 } from './modules/todoUI.js';
 import clearCompleted from './modules/clearComplated.js';
 
@@ -11,6 +11,7 @@ const inputForm = document.getElementById('inputField');
 const clear = document.getElementById('clear');
 
 window.removeList = removeList;
+window.updateList = updateList;
 
 window.addEventListener('load', () => {
   showTodo();
