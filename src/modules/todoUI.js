@@ -51,7 +51,7 @@ const removeList = (id) => {
   showTodo();
 };
 
-window.updateList = (id) => {
+const updateList = (id) => {
   const updateInput = document.querySelector(`#inputField-${id}`).value;
   const updateArray = getLocalStorage().map((item) => {
     if (item.index - 1 === id) {
@@ -65,10 +65,20 @@ window.updateList = (id) => {
     }
     return item;
   });
-
   localStorage.setItem('listStorage', JSON.stringify(updateArray));
 };
 
+const updateCheckBox = (id) => {
+  const inputBox = document.querySelector(`#inputField-${id}`).value;
+  const updateBox = getLocalStorage().map((item) => {
+    if (item.index - 1 === id) {
+      item.completed = inputBox;
+    }
+    return item;
+  });
+  localStorage.setItem('listStorage', JSON.stringify(updateBox));
+};
+
 export {
-  getLocalStorage, addTodo, showTodo, removeList,
+  getLocalStorage, addTodo, showTodo, updateList, removeList, updateCheckBox,
 };
