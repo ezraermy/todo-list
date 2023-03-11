@@ -4,7 +4,7 @@ import './style.css';
 import {
   getLocalStorage, addTodo, showTodo, updateList, removeList,
 } from './modules/todoUI.js';
-import clearCompleted from './modules/clearComplated.js';
+import clearCompleted from './modules/clearCompleted.js';
 
 const form = document.querySelector('#inputForm');
 const inputForm = document.getElementById('inputField');
