@@ -5,6 +5,10 @@ import clearCompleted from './clearComplated.js';
 
 document.body.innerHTML = `
 <div class="container">
+<div class="header">
+    <h1 class="title">Today's todo list</h1>
+    <button class="head-btn"><i class="fa">&#xf021;</i>   </button> 
+</div><hr>
 <form id="inputForm" class="input-field">
     <input type="text" id="inputField" class="input" placeholder="Add to your list..."><button id="addTodo" class="btn"><i class='fas fa-arrow-left'></i></button>
 </form><hr>
