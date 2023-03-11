@@ -1,7 +1,7 @@
 import {
   addTodo, updateList, removeList, updateCheckBox,
 } from './todoUI.js';
-import clearCompleted from './clearComplated.js';
+import clearCompleted from './clearCompleted.js';
 
 document.body.innerHTML = `
 <div class="container">
